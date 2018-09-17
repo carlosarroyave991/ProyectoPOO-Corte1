@@ -14,7 +14,7 @@ public class Usuarios {
 	String[] cedula= new String[30];
 	String[] edad= new String[30];
 	int a;
-	
+	int b,cont;
 
 	
 	public Usuarios() {
@@ -23,23 +23,40 @@ public class Usuarios {
 		edad[0]="";
 		cedula[0]="";
 		a=0;
+		b=0;
+		cont=0;
 		
 	}
 
 	public void CrearUsuario() {
 		sc =new Scanner(System.in);
 		System.out.println("Usted decidio Crear un usuario nuevo.");
-		System.out.println("Ingrese el numero de usuarios que desea ingresar:");
-		a=sc.nextInt();
-		for(int i=1;i<=a;i++) {
-			sc.nextLine();
-			System.out.println(i+".) Ingrese el nombre del usuario: ");
-			nombre[i]=sc.nextLine();
-			System.out.println(i+".) Ingrese la cedula del usuario: ");
-			cedula[i]=sc.nextLine();
-			System.out.println(i+".) Ingrese la edad del usuario: ");
-			edad[i]=sc.nextLine();
-			System.out.println("");
+		System.out.println("Ingrese el numero de usuarios que desea crear:");
+		if(a>0) {
+			b=sc.nextInt();
+			cont=a+b;
+			for(int i=a;i<=cont;i++) {
+				sc.nextLine();
+				System.out.println(i+".) Ingrese el nombre del usuario: ");
+				nombre[i]=sc.nextLine();
+				System.out.println(i+".) Ingrese la cedula del usuario: ");
+				cedula[i]=sc.nextLine();
+				System.out.println(i+".) Ingrese la edad del usuario: ");
+				edad[i]=sc.nextLine();
+				System.out.println("");
+			}
+		}else {
+			a=sc.nextInt();
+			for(int i=1;i<=a;i++) {
+				sc.nextLine();
+				System.out.println(i+".) Ingrese el nombre del usuario: ");
+				nombre[i]=sc.nextLine();
+				System.out.println(i+".) Ingrese la cedula del usuario: ");
+				cedula[i]=sc.nextLine();
+				System.out.println(i+".) Ingrese la edad del usuario: ");
+				edad[i]=sc.nextLine();
+				System.out.println("");
+			}
 		}
 		System.out.println("Los usuarios se han creado con exito.");
 		
