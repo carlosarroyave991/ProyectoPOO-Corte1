@@ -1,6 +1,7 @@
 package ProyectoCorte1;
 import java.util.Scanner;
 import ProyectoCorte1.Main;
+import ProyectoCorte1.*;
 
 public class Salas {
 	Main p = new Main();
@@ -25,7 +26,7 @@ public class Salas {
 		if(a>0) {
 			b=sc.nextInt();
 			cont =a+b;
-			for(int i = a;i<=cont;i++) {
+			for(int i = a+1;i<=cont;i++) {
 				sc.nextLine();
 				System.out.println(i+".) Ingrese el nombre de la sala: ");
 				sala[i]=sc.nextLine();
@@ -54,16 +55,16 @@ public class Salas {
 			System.out.println(i+".)El nombre de la sala es: "+this.sala[i]);
 			System.out.println(" ");
 		}
-		System.out.println("Los datos de usuario se han mostrado correctamente.");
+		System.out.println("Los datos de las salas se han mostrado correctamente.");
 	}
 	
 	
 	public void EditarUsuarios() {
 		sc =new Scanner(System.in);
-		System.out.println("Usted decidio editar los usuarios.");
+		System.out.println("Usted decidio editar las salas.");
 		System.out.println("Los datos tiene numeros, esas son las posiciones, escoja una para editar la sala determinada.");
 		for(int i=1;i<=a;i++) {
-			System.out.println(i+".)El nombre del usuario es: "+this.sala[i]);
+			System.out.println(i+".)El nombre de la sala es: "+this.sala[i]);
 			System.out.println(" ");
 		}
 		System.out.println("Ingrese numero:");

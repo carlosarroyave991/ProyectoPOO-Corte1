@@ -1,6 +1,6 @@
 package ProyectoCorte1;
 import java.util.Scanner;
-
+import ProyectoCorte1.*;
 import ProyectoCorte1.Main;
 
 
@@ -10,7 +10,7 @@ public class Usuarios {
 	
 	//atributos
 	private Scanner sc;
-	String[] nombre = new String[30];
+	String[] nombre = new String[120];
 	String[] cedula= new String[30];
 	String[] edad= new String[30];
 	int a;
@@ -35,7 +35,7 @@ public class Usuarios {
 		if(a>0) {
 			b=sc.nextInt();
 			cont=a+b;
-			for(int i=a;i<=cont;i++) {
+			for(int i=a+1;i<=cont;i++) {
 				sc.nextLine();
 				System.out.println(i+".) Ingrese el nombre del usuario: ");
 				nombre[i]=sc.nextLine();
